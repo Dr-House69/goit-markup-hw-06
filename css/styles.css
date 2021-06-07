@@ -241,6 +241,167 @@ body {
 .backdrop.is-hidden .modal-close-btn {
   transform: scale(0.5);
 }
+/* === FORM INPUTS === */
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
+  margin-bottom: 12px;
+}
+
+.modal-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--second-text-color);
+
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal-input-field:focus-within > .modal-input-info {
+  border: 1px solid var(--accent-color);
+}
+
+.modal-input-field:focus-within > .modal-input-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input-field {
+  position: relative;
+}
+
+.modal-input-info {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding: 12px 12px 12px 42px;
+  color: var(--second-text-color);
+  outline: var(--accent-color);
+  transition: border var(--animation-duration) var(--animation-timing-function);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--main-text-color);
+
+  transition: fill var(--animation-duration) var(--animation-timing-function);
+}
+
+/* ===FORM COMMENT === */
+
+.modal-field-comment {
+  margin-bottom: 20px;
+}
+
+.modal-comment {
+  color: var(--second-text-color);
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  outline: var(--accent-color);
+  padding: 12px 16px;
+  transition: border var(--animation-duration) var(--animation-timing-function);
+}
+
+.modal-field-comment:focus-within > .modal-comment {
+  border: 1px solid var(--accent-color);
+}
+
+/* === FORM CHECKBOX === */
+
+.modal-confirm {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-text-color);
+
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+  transition: color var(--animation-duration) var(--animation-timing-function);
+}
+
+.modal-confirm-checkbox:checked + .modal-checkbox-icon {
+  background-image: url("../images/check.svg");
+  background-color: var(--accent-color);
+
+  background-size: contain;
+  background-origin: padding-box;
+  border-color: var(--accent-color);
+}
+
+.modal-checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  color: var(--main-text-color);
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  margin-left: 14px;
+  margin-right: 7px;
+  transition: color var(--animation-duration) var(--animation-timing-function);
+}
+
+.modal-confirm-checkbox:focus + .modal-checkbox-icon,
+.modal-confirm-checkbox:focus ~ .modal-confirm-conditions,
+.modal-confirm:focus > .modal-checkbox-icon,
+.modal-confirm:hover > .modal-checkbox-icon,
+.modal-confirm:focus,
+.modal-confirm:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+/* === FORM BUTTON === */
+
+.modal-button-submit {
+  background-color: var(--accent-color);
+  color: var(--third-text-color);
+  width: 200px;
+  padding: 10px 56px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--animation-duration)
+    var(--animation-timing-function);
+}
+
+.modal-button-submit:focus,
+.modal-button-submit:hover {
+  cursor: pointer;
+  background-color: var(--modal-btn-hover-focus-background-color);
+}
+
 /* === MODAL === */
 .modal {
   position: relative;
@@ -287,8 +448,17 @@ body {
 .modal-close-btn:hover .close-icon {
   color: var(--accent-color);
 }
+.modal-form {
+  background: var(--body-background-color);
+  height: 581px;
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 
 /* ==FEATURES== */
+
 .feature {
   padding-top: 94px;
   padding-bottom: 47px;
