@@ -344,6 +344,7 @@ body {
   letter-spacing: 0.03em;
 
   margin-bottom: 30px;
+  cursor: pointer;
   transition: color var(--animation-duration) var(--animation-timing-function);
 }
 
@@ -354,6 +355,8 @@ body {
   background-size: contain;
   background-origin: padding-box;
   border-color: var(--accent-color);
+  transition: background-color var(--animation-duration)
+    var(--animation-timing-function);
 }
 
 .modal-checkbox-icon {
@@ -367,17 +370,25 @@ body {
   margin-right: 7px;
   transition: color var(--animation-duration) var(--animation-timing-function);
 }
-
+.modal-confirm-conditions > a {
+  color: var(--accent-color);
+}
 .modal-confirm-checkbox:focus + .modal-checkbox-icon,
-.modal-confirm-checkbox:focus ~ .modal-confirm-conditions,
 .modal-confirm:focus > .modal-checkbox-icon,
-.modal-confirm:hover > .modal-checkbox-icon,
-.modal-confirm:focus,
-.modal-confirm:hover {
+.modal-confirm:hover > .modal-checkbox-icon {
   cursor: pointer;
   color: var(--accent-color);
 }
 
+/* .modal-confirm-checkbox:focus + .modal-checkbox-icon, */
+/* .modal-confirm-checkbox:focus ~ .modal-confirm-conditions, */
+/* .modal-confirm:focus > .modal-checkbox-icon, */
+/* .modal-confirm:hover > .modal-checkbox-icon, */
+/* .modal-confirm:focus, */
+/* .modal-confirm:hover { */
+/* cursor: pointer; */
+/* color: var(--accent-color); */
+/* } */
 /* === FORM BUTTON === */
 
 .modal-button-submit {
